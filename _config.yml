@@ -1,20 +1,24 @@
-# Site Settings
+# Personal Portfolio Configuration
+# Theme: modern-resume-theme
+
 repository: sproogen/modern-resume-theme
 remote_theme: sproogen/modern-resume-theme
 favicon: images/favicon.ico
 darkmode: true
 
-# Personal Info
-name: "Rakibul Hasan Rizvi"
-title: "System Engineer | Linux & VoIP Specialist | Future DevOps Engineer"
-email: "your-email@example.com"
-phone: "+8801XXXXXXXXX"
-location: "Bangladesh"
-website: "https://rakibulhasanrizvi.github.io"
+# Site settings
+title: "Rakibul Hasan Rizvi"
+description: "Linux & VoIP Specialist | Systems Engineer | Future DevOps Engineer"
+url: "https://rakibulhasanrizvi.github.io"
 
-# Social Links
-github_username: rakibulhasanrizvi
-linkedin_username: rakibulhasanrizvi
+# Personal info
+name: "Rakibul Hasan Rizvi"
+title: "Systems Engineer | Linux & VoIP Specialist"
+email: "rakibulhasanrizvi@yahoo.com"
+phone: "+8801679343895"
+location: "Bangladesh"
+github_username: "rakibulhasanrizvi"
+linkedin_username: "rakibulhasanrizvi"
 
 # About Section
 about_profile_image: images/profile.jpg
@@ -29,9 +33,9 @@ content:
     layout: list
     content:
       - layout: left
-        title: "IT & Telecom Services Provider"
+        title: "Agni Systems PLC"
         sub_title: "Systems Engineer"
-        caption: "Present"
+        caption: "August 2023 - Present"
         description: |
           - Maintain and administer Linux servers for VoIP and mail infrastructure.  
           - Manage Issabel and Asterisk PBX with SIP trunks and call routing.  
@@ -44,23 +48,23 @@ content:
     content:
       - layout: top-middle
         description: |
-          **Linux Server Administration**  
-          **Asterisk / Issabel / VoIP Systems**  
-          **Proxmox Virtualization**  
-          **Mail Server & Security Management**  
-          **Bash & Python Scripting**  
-          **Networking & Subnetting**  
-          **DevOps Tools:** Docker, Ansible, Terraform  
+          **Linux Server Administration (Expert)**  
+          **Asterisk / Issabel / VoIP (Expert)**  
+          **Proxmox Virtualization (Expert)**  
+          **Mail Server & Security (Advanced)**  
+          **Bash & Python Scripting (Advanced)**  
+          **Networking & Subnetting (Advanced)**  
+          **DevOps Tools:** Docker, Ansible, Terraform (Learning)  
           **Cloud Platforms:** AWS, GCP (Beginner)
 
-  - title: "Projects"
+  - title: "Highlighted Projects"
     layout: list
     content:
       - layout: left
         title: "Call Center Alias Dialing System"
         link: "https://github.com/rakibulhasanrizvi"
         description: |
-          Designed a database-driven Issabel call routing system where agents dial short aliases mapped to hidden real numbers.
+          Database-driven Issabel call routing system where agents dial short aliases mapped to hidden real numbers.
 
       - layout: left
         title: "Secure Mail & VoIP Infrastructure"
@@ -72,9 +76,8 @@ content:
     content:
       - layout: left
         title: "Bachelor’s in Computer Science & Engineering"
-        sub_title: "Your University Name"
-        caption: "—"
-        description: ""
+        sub_title: "American International University-Bangladesh"
+        caption: "2018 - 2021"
 
 # Footer
 footer_show_references: false
