@@ -21,7 +21,7 @@ github_username: "rakibulhasanrizvi"
 linkedin_username: "rakibulhasanrizvi"
 
 # About Section
-about_profile_image: images/profile.jpg
+about_profile_image: profile.jpg
 about_content: |
   I’m a Systems Engineer experienced in managing Linux-based environments, VoIP infrastructures (Issabel, Asterisk), and virtualized servers (Proxmox).  
   Passionate about automation, DevOps, and cloud computing.  
