@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakibul Hasan Rizvi | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' }
+    </script>
+    <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <nav class="bg-blue-900 dark:bg-gray-800 text-white fixed w-full z-50 top-0 shadow">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="text-lg font-bold">Rakibul Hasan Rizvi</div>
+            <div class="flex items-center space-x-4">
+                <a href="#about" class="hover:text-gray-300">About</a>
+                <a href="#skills" class="hover:text-gray-300">Skills</a>
+                <a href="#projects" class="hover:text-gray-300">Projects</a>
+                <a href="#contact" class="hover:text-gray-300">Contact</a>
+                <button id="themeToggle" class="ml-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded">🌙</button>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-blue-900 dark:bg-gray-800 text-white py-32 mt-16">
+        <div class="container mx-auto text-center">
+            <img src="images/profile.jpg" alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white">
+            <h1 class="text-4xl font-bold">Rakibul Hasan Rizvi</h1>
+            <p class="mt-2 text-xl">Linux & VoIP Specialist | Future DevOps Engineer</p>
+        </div>
+    </header>
+    <section id="about" class="container mx-auto my-12 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <h2 class="text-3xl font-semibold mb-4 text-blue-900 dark:text-blue-400">About Me</h2>
+        <p>I am an experienced Systems Engineer specializing in Linux, VoIP, and DevOps technologies. I enjoy building scalable systems and automating processes to make life easier for businesses and teams.</p>
+    </section>
+    <section id="skills" class="container mx-auto my-12 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <h2 class="text-3xl font-semibold mb-6 text-blue-900 dark:text-blue-400">Skills</h2>
+        <div class="space-y-4">
+            <div><p class="mb-1 font-semibold">Linux Server Management</p><div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4"><div class="bg-blue-700 dark:bg-blue-500 h-4 rounded-full w-0" data-width="90%"></div></div></div>
+            <div><p class="mb-1 font-semibold">VoIP / Asterisk / Issabel</p><div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4"><div class="bg-blue-700 dark:bg-blue-500 h-4 rounded-full w-0" data-width="85%"></div></div></div>
+            <div><p class="mb-1 font-semibold">Docker & Terraform</p><div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4"><div class="bg-blue-700 dark:bg-blue-500 h-4 rounded-full w-0" data-width="80%"></div></div></div>
+            <div><p class="mb-1 font-semibold">DevOps & Cloud Automation</p><div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4"><div class="bg-blue-700 dark:bg-blue-500 h-4 rounded-full w-0" data-width="75%"></div></div></div>
+        </div>
+        <script>
+            const bars = document.querySelectorAll('#skills div[data-width]');
+            bars.forEach(bar => { const width = bar.getAttribute('data-width'); setTimeout(() => { bar.style.width = width; }, 500); });
+        </script>
+    </section>
+    <section id="projects" class="container mx-auto my-12 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <h2 class="text-3xl font-semibold mb-6 text-blue-900 dark:text-blue-400">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-blue-50 dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition duration-300 p-5"><h3 class="text-xl font-bold mb-2">VoIP Server Setup</h3><p class="mb-3">Configured Asterisk & Issabel servers for scalable VoIP solutions.</p><a href="#" class="text-blue-700 dark:text-blue-300 font-semibold hover:underline">View Details</a></div>
+            <div class="bg-blue-50 dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition duration-300 p-5"><h3 class="text-xl font-bold mb-2">Automated Linux Deployment</h3><p class="mb-3">Created scripts to automate Linux server setup, saving time and errors.</p><a href="#" class="text-blue-700 dark:text-blue-300 font-semibold hover:underline">View Details</a></div>
+            <div class="bg-blue-50 dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition duration-300 p-5"><h3 class="text-xl font-bold mb-2">DevOps Lab Automation</h3><p class="mb-3">Built personal lab with Docker, Terraform, and CI/CD pipelines for experiments.</p><a href="#" class="text-blue-700 dark:text-blue-300 font-semibold hover:underline">View Details</a></div>
+        </div>
+    </section>
+    <section id="contact" class="container mx-auto my-12 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <h2 class="text-3xl font-semibold mb-4 text-blue-900 dark:text-blue-400">Contact Me</h2>
+        <p>Email: <a href="mailto:rakibulhasanrizvi@yahoo.com" class="text-blue-700 dark:text-blue-300 underline">rakibulhasanrizvi@yahoo.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/rakibulhasanrizvi" target="_blank" class="text-blue-700 dark:text-blue-300 underline">linkedin.com/in/rakibulhasanrizvi</a></p>
+        <p>GitHub: <a href="https://github.com/rakibulhasanrizvi" target="_blank" class="text-blue-700 dark:text-blue-300 underline">github.com/rakibulhasanrizvi</a></p>
+    </section>
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-700 dark:bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-800 dark:hover:bg-blue-600 transition hidden">↑</button>
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => { if (window.scrollY > 300) { backToTop.classList.remove('hidden'); } else { backToTop.classList.add('hidden'); } });
+        backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark') { root.classList.add('dark'); themeToggle.textContent = '☀️'; }
+        themeToggle.addEventListener('click', () => {
+            if (root.classList.contains('dark')) { root.classList.remove('dark'); localStorage.setItem('theme','light'); themeToggle.textContent='🌙'; }
+            else { root.classList.add('dark'); localStorage.setItem('theme','dark'); themeToggle.textContent='☀️'; }
+        });
+    </script>
+    <footer class="bg-blue-900 dark:bg-gray-800 text-white dark:text-gray-200 py-6 text-center">&copy; 2025 Rakibul Hasan Rizvi. All rights reserved.</footer>
+</body>
+</html>
