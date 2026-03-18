@@ -1,20 +1,26 @@
 /* --- CSS Variables & Theming System (Nimbus Theme) --- */
 :root {
     /* Color Palette */
-    --clr-bg: #05050A;               /* Deep Dark background */
-    --clr-bg-alt: rgba(15, 15, 25, 0.4); /* background for cards */
-    --clr-text: #f8fafc;             /* Main text */
-    --clr-text-muted: #94a3b8;       /* Muted text */
-    --clr-primary: #6366f1;          /* Indigo accent */
-    --clr-primary-hover: #4f46e5;    
-    --clr-secondary: #ec4899;        /* Pink accent */
+    --clr-bg: #05050A;
+    /* Deep Dark background */
+    --clr-bg-alt: rgba(15, 15, 25, 0.4);
+    /* background for cards */
+    --clr-text: #f8fafc;
+    /* Main text */
+    --clr-text-muted: #94a3b8;
+    /* Muted text */
+    --clr-primary: #6366f1;
+    /* Indigo accent */
+    --clr-primary-hover: #4f46e5;
+    --clr-secondary: #ec4899;
+    /* Pink accent */
     --clr-border: rgba(255, 255, 255, 0.08);
     --clr-border-light: rgba(255, 255, 255, 0.15);
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
     --gradient-glow: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(236, 72, 153, 0.5));
-    
+
     /* Typography */
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
     --fw-light: 300;
@@ -28,7 +34,7 @@
     --section-pad-y: 6rem;
     --transition-fast: 0.2s ease;
     --transition-med: 0.3s ease-in-out;
-    
+
     /* Radii & Shadows */
     --radius-sm: 8px;
     --radius-md: 16px;
@@ -46,7 +52,8 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Native smooth scrolling */
+    scroll-behavior: smooth;
+    /* Native smooth scrolling */
 }
 
 body {
@@ -102,7 +109,8 @@ img {
 }
 
 .dark-bg {
-    background-color: var(--clr-bg); /* Nimbu has one dark bg, so we use main bg or transparent */
+    background-color: var(--clr-bg);
+    /* Nimbu has one dark bg, so we use main bg or transparent */
 }
 
 /* --- Theme Utilities --- */
@@ -177,10 +185,21 @@ img {
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(50px, -50px) scale(1.1); }
-    66% { transform: translate(-30px, 30px) scale(0.9); }
-    100% { transform: translate(0, 0) scale(1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(50px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-30px, 30px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
 }
 
 .highlight {
@@ -214,14 +233,16 @@ img {
     filter: brightness(1.1);
 }
 
-.btn-secondary, .btn-outline {
+.btn-secondary,
+.btn-outline {
     background: transparent;
     color: var(--clr-text);
     border: 1px solid var(--clr-border-light);
     backdrop-filter: blur(8px);
 }
 
-.btn-secondary:hover, .btn-outline:hover {
+.btn-secondary:hover,
+.btn-outline:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
@@ -235,11 +256,12 @@ nav {
     width: 100%;
     height: 70px;
     background-color: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    /* Glassmorphism effect */
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition-med);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -307,7 +329,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 5% 0; /* Added padding-top to account for fixed navbar */
+    padding: 100px 5% 0;
+    /* Added padding-top to account for fixed navbar */
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -359,18 +382,30 @@ nav {
     background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     box-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.blob img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* --- About Section --- */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Changed to 1fr 1fr for better balance */
+    grid-template-columns: 1fr 1fr;
+    /* Changed to 1fr 1fr for better balance */
     gap: 4rem;
     align-items: center;
 }
 
 .about-text {
-    animation: fadeUp 1s ease 0.2s both; /* Slight delay for staggered effect */
+    animation: fadeUp 1s ease 0.2s both;
+    /* Slight delay for staggered effect */
 }
 
 .about-text p {
@@ -381,7 +416,8 @@ nav {
 
 .skills-title {
     margin: 1.5rem 0 1rem;
-    font-size: 1.1rem; /* Slightly larger */
+    font-size: 1.1rem;
+    /* Slightly larger */
     color: var(--clr-text);
     font-weight: var(--fw-semi);
 }
@@ -414,7 +450,8 @@ nav {
 
 .about-image-container {
     position: relative;
-    max-width: 350px; /* Increased size slightly */
+    max-width: 350px;
+    /* Increased size slightly */
     margin: 0 auto;
     width: 100%;
     animation: fadeUp 1s ease 0.4s both;
@@ -438,7 +475,8 @@ nav {
 .profile-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the box without stretching */
+    object-fit: cover;
+    /* Ensures the image covers the box without stretching */
     display: block;
 }
 
@@ -457,7 +495,8 @@ nav {
 
 .about-image-container:hover .about-image-placeholder {
     transform: translate(-10px, -10px);
-    background-color: rgba(56, 189, 248, 0.05); /* Slight fill on hover */
+    background-color: rgba(56, 189, 248, 0.05);
+    /* Slight fill on hover */
     box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
 }
 
@@ -478,14 +517,14 @@ nav {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: all 0.4s ease;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
     border-color: rgba(56, 189, 248, 0.3);
 }
 
@@ -497,7 +536,7 @@ nav {
     justify-content: center;
     color: var(--clr-text-muted);
     font-style: italic;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.4s ease;
 }
 
@@ -630,13 +669,22 @@ footer p {
 .about-grid.reveal.active .about-text {
     transition-delay: 0.1s;
 }
+
 .about-grid.reveal.active .about-image-container {
     transition-delay: 0.3s;
 }
 
-.projects-grid.reveal.active .project-card:nth-child(1) { transition-delay: 0.1s; }
-.projects-grid.reveal.active .project-card:nth-child(2) { transition-delay: 0.2s; }
-.projects-grid.reveal.active .project-card:nth-child(3) { transition-delay: 0.3s; }
+.projects-grid.reveal.active .project-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.projects-grid.reveal.active .project-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.projects-grid.reveal.active .project-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
 
 
 @keyframes fadeUp {
@@ -644,6 +692,7 @@ footer p {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -651,10 +700,21 @@ footer p {
 }
 
 @keyframes pulseBlob {
-    0% { transform: scale(1) translate(0, 0); }
-    33% { transform: scale(1.05) translate(10px, -20px); }
-    66% { transform: scale(0.95) translate(-10px, 20px); }
-    100% { transform: scale(1) translate(0, 0); }
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    33% {
+        transform: scale(1.05) translate(10px, -20px);
+    }
+
+    66% {
+        transform: scale(0.95) translate(-10px, 20px);
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
 }
 
 /* --- Media Queries --- */
@@ -666,7 +726,8 @@ footer p {
     .nav-links {
         position: absolute;
         top: 70px;
-        right: -100%; /* Hidden by default */
+        right: -100%;
+        /* Hidden by default */
         width: 100%;
         height: calc(100vh - 70px);
         background-color: var(--clr-bg);
@@ -705,11 +766,13 @@ footer p {
     }
 
     .about-image-container {
-        grid-row: 1; /* Move image above text on mobile */
+        grid-row: 1;
+        /* Move image above text on mobile */
         margin-bottom: 2rem;
     }
-    
+
     .section-title::after {
-        width: 100px; /* shorter line on mobile */
+        width: 100px;
+        /* shorter line on mobile */
     }
 }
