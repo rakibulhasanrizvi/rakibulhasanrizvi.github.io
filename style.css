@@ -403,10 +403,7 @@ nav {
     align-items: center;
 }
 
-.about-text {
-    animation: fadeUp 1s ease 0.2s both;
-    /* Slight delay for staggered effect */
-}
+
 
 .about-text p {
     color: var(--clr-text-muted);
@@ -454,7 +451,6 @@ nav {
     /* Increased size slightly */
     margin: 0 auto;
     width: 100%;
-    animation: fadeUp 1s ease 0.4s both;
 }
 
 .about-image-placeholder {
@@ -665,26 +661,7 @@ footer p {
     transform: translateY(0);
 }
 
-/* Staggered reveals for children of grid */
-.about-grid.reveal.active .about-text {
-    transition-delay: 0.1s;
-}
-
-.about-grid.reveal.active .about-image-container {
-    transition-delay: 0.3s;
-}
-
-.projects-grid.reveal.active .project-card:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.projects-grid.reveal.active .project-card:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.projects-grid.reveal.active .project-card:nth-child(3) {
-    transition-delay: 0.3s;
-}
+/* Standard reveals for grid are handled by their parent container's .reveal class */
 
 
 @keyframes fadeUp {
