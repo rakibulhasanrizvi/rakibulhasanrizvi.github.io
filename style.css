@@ -30,7 +30,7 @@
     --fw-bold: 700;
 
     /* Spacing & Layout */
-    --max-width: 1100px;
+    --max-width: 1200px;
     --section-pad-y: 6rem;
     --transition-fast: 0.2s ease;
     --transition-med: 0.3s ease-in-out;
@@ -370,7 +370,7 @@ nav {
 .hero-graphic {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     animation: pulseBlob 8s infinite alternate ease-in-out;
 }
@@ -731,6 +731,7 @@ footer p {
 
     .hero-graphic {
         margin-top: 3rem;
+        justify-content: center;
     }
 
     .blob {
