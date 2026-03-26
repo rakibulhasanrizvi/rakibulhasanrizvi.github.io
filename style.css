@@ -801,12 +801,18 @@ footer p {
         padding-top: 100px;
     }
 
+    .hero-content {
+        order: 2;
+    }
+
     .hero-cta {
         justify-content: center;
     }
 
     .hero-graphic {
-        margin-top: 3rem;
+        order: 1;
+        margin-top: 0;
+        margin-bottom: 2.5rem;
         justify-content: center;
     }
 
