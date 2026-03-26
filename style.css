@@ -88,6 +88,7 @@ img {
 
 .section {
     padding: var(--section-pad-y) 0;
+    scroll-margin-top: 30px;
 }
 
 .section-title {
