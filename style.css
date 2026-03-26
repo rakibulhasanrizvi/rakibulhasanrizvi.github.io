@@ -31,7 +31,7 @@
 
     /* Spacing & Layout */
     --max-width: 1200px;
-    --section-pad-y: 6rem;
+    --section-pad-y: 3rem;
     --transition-fast: 0.2s ease;
     --transition-med: 0.3s ease-in-out;
 
