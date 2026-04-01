@@ -49,17 +49,36 @@
                 <div class="glass-card" style="padding: 2.5rem;">
                     <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">Project Overview</h3>
                     <p style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2rem;">
-                        Implemented an automated firewall monitoring solution using iptables across multiple PBX servers, with real-time alerts to detect suspicious traffic and unauthorized access attempts.
+                        This wasn’t a very big project, but it was an interesting and practical implementation for me. <i class="fas fa-smile-beam" style="color: #fbbf24;"></i><br>
+                        This setup helps ensure firewall integrity by detecting unexpected rule changes, auto-recovering IPTables, and sending email alerts instantly.
                     </p>
                     
-                    <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">Key Features & Challenges</h3>
-                    <p style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2rem;">
-                        Here you can expand on specific technical challenges you encountered and how you solved them. Include diagrams, code snippets, or architectural flows to make this page stand out to recruiters and engineering managers.
-                    </p>
-                    
-                    <div style="padding: 2rem; background: rgba(0,0,0,0.2); border-radius: var(--radius-sm); border: 1px dashed var(--clr-border); text-align: center; color: var(--clr-text-muted);">
-                        <i class="fas fa-image fa-3x" style="margin-bottom: 1rem; opacity: 0.5;"></i>
-                        <p>Placeholder for Architecture Diagram or Screenshot</p>
+                    <div style="display: grid; gap: 2rem;">
+                        <div>
+                            <h4 style="margin-bottom: 1rem; color: var(--clr-text); display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-tools" style="color: #10b981; font-size: 1.25rem;"></i> Key steps included
+                            </h4>
+                            <ul style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-left: 2rem; list-style-type: none;">
+                                <li><i class="fas fa-angle-right" style="color: var(--clr-primary); margin-right: 0.5rem; font-size: 0.9em;"></i> Creating a monitoring script under <code style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-family: monospace; color: var(--clr-primary);">/etc/cron.hourly</code></li>
+                                <li><i class="fas fa-angle-right" style="color: var(--clr-primary); margin-right: 0.5rem; font-size: 0.9em;"></i> Auto-restarting IPTables if mismatched rules are detected</li>
+                                <li><i class="fas fa-angle-right" style="color: var(--clr-primary); margin-right: 0.5rem; font-size: 0.9em;"></i> Sending rule snapshots via Sendmail</li>
+                                <li><i class="fas fa-angle-right" style="color: var(--clr-primary); margin-right: 0.5rem; font-size: 0.9em;"></i> Validating hourly execution using run-parts and cron</li>
+                                <li><i class="fas fa-angle-right" style="color: var(--clr-primary); margin-right: 0.5rem; font-size: 0.9em;"></i> Ensuring everything works with manual and automatic tests</li>
+                            </ul>
+                        </div>
+
+                        <div style="text-align: center; margin: 1rem 0;">
+                            <img src="images/iptables-monitoring.jpg" alt="IPTables Monitoring Architecture Diagram" style="max-width: 100%; border-radius: var(--radius-sm); box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        </div>
+
+                        <div style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-top: 0.5rem;">
+                            <h4 style="margin-bottom: 0.75rem; color: #10b981; display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-shield-alt"></i> Security Outcome
+                            </h4>
+                            <p style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 0;">
+                                This solution provides consistent, proactive security monitoring for PBX infrastructures — with fast visibility if something changes.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
