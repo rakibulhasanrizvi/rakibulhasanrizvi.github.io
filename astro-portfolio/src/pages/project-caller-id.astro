@@ -1,0 +1,86 @@
+---
+import ProjectLayout from '../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout title="Caller-ID Masking System">
+<div class="project-page-content reveal">
+                <div class="project-tech" style="margin-bottom: 2rem;">
+                    <span>Call Center</span><span>Asterisk</span><span>MySQL</span>
+                </div>
+
+                <div class="glass-card" style="padding: 2.5rem;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">Project Overview</h3>
+                    <p
+                        style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2.5rem;">
+                        Here’s what I built:
+                    </p>
+
+                    <div style="display: grid; gap: 2rem;">
+                        <div>
+                            <h4
+                                style="margin-bottom: 1rem; color: var(--clr-text); display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-shield-alt" style="color: #10b981; font-size: 1.25rem;"></i> Incoming
+                                Call Masking
+                            </h4>
+                            <p
+                                style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-left: 2rem;">
+                                When customers call the helpline, the agent screen displays <code style="background: rgba(0,0,0,0.2); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.95em;">00000000000</code>,
+                                but the real Caller ID is securely stored in CDR and call recordings.
+                                This helps maintain privacy while ensuring complete admin traceability.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4
+                                style="margin-bottom: 1rem; color: var(--clr-text); display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-phone-slash" style="color: #10b981; font-size: 1.25rem;"></i> Outgoing
+                                Call Alias Dialing
+                            </h4>
+                            <p
+                                style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-left: 2rem;">
+                                Agents dial a 5–6 digit alias code instead of the actual phone number.<br>
+                                Behind the scenes, Issabel/Asterisk fetches the real number from a MySQL database via
+                                ODBC + func_odbc, then places the call normally.<br>
+                                Agents never see the real destination number, but it is logged correctly for admin
+                                reports.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4
+                                style="margin-bottom: 1rem; color: var(--clr-text); display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-layer-group" style="color: #10b981; font-size: 1.25rem;"></i>
+                                Technology Stack & Components
+                            </h4>
+                            <ul style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-left: 3.25rem; padding-left: 1.5rem; list-style-type: none;">
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Issabel Call Center</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Asterisk custom dialplan</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>MySQL + ODBC for alias-to-number mapping</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Caller ID privacy masking</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Custom context routing, MixMonitor, CDR manipulation</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Secure internal number translation logic</li>
+                            </ul>
+                        </div>
+
+                        <div
+                            style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-top: 1rem;">
+                            <h4
+                                style="margin-bottom: 0.75rem; color: #10b981; display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-check-circle"></i> Outcome
+                            </h4>
+                            <p
+                                style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 0;">
+                                This solution enforces data privacy, prevents misuse, and delivers a fully controlled
+                                call environment while keeping admin supervisors in full oversight.
+                            </p>
+                        </div>
+
+                        <div style="display: flex; justify-content: center; width: 100%; margin: 2.5rem 0 1rem 0;">
+                            <img src="images/caller-id-architecture.png" alt="Caller-ID Masking Architecture Diagram"
+                                style="width: 100%; height: auto; object-fit: contain; border-radius: var(--radius-sm); box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        </div>
+
+                    </div>
+                </div>
+            
+</ProjectLayout>

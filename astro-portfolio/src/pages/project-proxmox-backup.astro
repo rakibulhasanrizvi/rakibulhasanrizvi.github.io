@@ -1,0 +1,120 @@
+---
+import ProjectLayout from '../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout title="Proxmox Backup Server Deployment">
+<div class="project-page-content reveal">
+                <div class="project-tech" style="margin-bottom: 2rem;">
+                    <span>Proxmox</span><span>Backup</span><span>SysAdmin</span>
+                </div>
+
+                <div class="glass-card" style="padding: 2.5rem;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">Project Overview</h3>
+                    <p
+                        style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2.5rem;">
+                        Here’s a quick overview of what I accomplished:
+                    </p>
+
+                    <div style="display: grid; gap: 1.5rem; margin-bottom: 2.5rem;">
+                        <ul
+                            style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2.5rem; padding-left: 1.5rem; list-style-type: none;">
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-cube" style="font-size: 0.9rem;"></i></span>
+                                Installed Proxmox Backup Server on the dedicated backup device
+                            </li>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-hdd" style="font-size: 0.9rem;"></i></span>
+                                Added a new disk and configured as datastore
+                            </li>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-link" style="font-size: 0.9rem;"></i></span>
+                                Mounted the disk and made it persistent using <code
+                                    style="background: rgba(0,0,0,0.2); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.95em;">/etc/fstab</code>
+                            </li>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>
+                                Verified storage mapping using <code
+                                    style="background: rgba(0,0,0,0.2); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.95em;">df -h</code>
+                            </li>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-users-cog" style="font-size: 0.9rem;"></i></span>
+                                Created PBS user accounts and assigned proper access roles:
+                                <div
+                                    style="margin-top: 0.5rem; font-size: 1rem; color: var(--clr-text-muted); background: rgba(0,0,0,0.2); padding: 1rem 1.5rem; border-radius: var(--radius-sm); border-left: 3px solid var(--clr-primary); width: 100%; max-width: 500px;">
+                                    <strong>Path:</strong> /<br>
+                                    <strong>Role:</strong> DataStoreAdmin
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-network-wired" style="font-size: 0.9rem;"></i></span>
+                                Integrated PBS with Proxmox VE:
+                                <div
+                                    style="margin-top: 0.5rem; font-size: 1rem; color: var(--clr-text-muted); background: rgba(0,0,0,0.2); padding: 1rem 1.5rem; border-radius: var(--radius-sm); border-left: 3px solid var(--clr-primary); width: 100%; max-width: 500px;">
+                                    Datacenter &rarr; Storage &rarr; Add &rarr; Proxmox Backup Server
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-clock" style="font-size: 0.9rem;"></i></span>
+                                Set up automated backup jobs based on required schedules and retention settings
+                            </li>
+                        </ul>
+
+                        <div
+                            style="background: rgba(232, 86, 42, 0.05); border-left: 4px solid #e8562a; padding: 1.5rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-top: 1rem;">
+                            <h4
+                                style="margin-bottom: 0.75rem; color: #e8562a; display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-rocket"></i> Outcome
+                            </h4>
+                            <p
+                                style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 0;">
+                                This setup now ensures reliable, automated, and efficient VM backups with deduplication
+                                and encryption support.<br><br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide Show Section -->
+                    <div
+                        style="margin-top: 3.5rem; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; position: relative; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; background: #000;">
+                        <div style="position: relative; width: 100%; padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                            <!-- Use these two image tags and point src to the images in your folder -->
+                            <img class="proxmox-slide" src="images/proxmox-slide1.png"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 1; transition: opacity 1.5s ease-in-out;"
+                                alt="Proxmox Backup Setup Slide 1">
+                            <img class="proxmox-slide" src="images/proxmox-slide2.png"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1.5s ease-in-out;"
+                                alt="Proxmox Backup Setup Slide 2">
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const slides = document.querySelectorAll(".proxmox-slide");
+                            let currentSlide = 0;
+
+                            if (slides.length > 1) {
+                                setInterval(() => {
+                                    slides[currentSlide].style.opacity = 0;
+                                    currentSlide = (currentSlide + 1) % slides.length;
+                                    slides[currentSlide].style.opacity = 1;
+                                }, 4000); // Transitions every 4 seconds
+                            }
+                        });
+                    </script>
+                </div>
+            
+</ProjectLayout>

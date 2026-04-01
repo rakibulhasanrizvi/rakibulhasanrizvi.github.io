@@ -1,0 +1,39 @@
+---
+// Layout.astro
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+  title = "Rakibul Hasan Rizvi | Portfolio", 
+  description = "Personal portfolio of Hasan Rizvi showcasing projects and skills." 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<!-- Local Fonts: Inter -->
+		<link rel="stylesheet" href="/fonts/inter/inter.css">
+		<link rel="stylesheet" href="/style.css">
+		<!-- Local Font Awesome for Icons -->
+		<link rel="stylesheet" href="/fontawesome/css/all.min.css">
+	</head>
+	<body>
+		<!-- Nimbus Ambient Background -->
+		<div class="ambient-background">
+			<div class="glow glow-1"></div>
+			<div class="glow glow-2"></div>
+			<div class="glow glow-3"></div>
+		</div>
+
+		<slot />
+
+		<script src="/script.js" defer></script>
+	</body>
+</html>

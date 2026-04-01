@@ -1,0 +1,63 @@
+---
+import ProjectLayout from '../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout title="Proxmox VM Auto Disk Expansion">
+<div class="project-page-content reveal">
+                <div class="project-tech" style="margin-bottom: 2rem;">
+                    <span>Proxmox</span><span>Automation</span><span>Storage</span>
+                </div>
+                
+                <div class="glass-card" style="padding: 2.5rem;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">Project Overview</h3>
+                    <p style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                        Developed a lightweight automation for Proxmox VE that automatically extends VM disk space when thresholds are reached, reducing manual intervention and downtime risk.
+                    </p>
+                    
+                    <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">How it works</h3>
+                    <ul style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2.5rem; padding-left: 1.5rem; list-style-type: none;">
+                        <li style="margin-bottom: 0.8rem; position: relative;">
+                            <span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>
+                            A <strong>systemd timer</strong> inside the VM checks disk space every 5 minutes.
+                        </li>
+                        <li style="margin-bottom: 0.8rem; position: relative;">
+                            <span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>
+                            When free space drops below the threshold, the VM securely triggers the Proxmox host using SSH + a restricted user (allowed only to run <code>qm resize</code>).
+                        </li>
+                        <li style="margin-bottom: 0.8rem; position: relative;">
+                            <span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>
+                            Proxmox extends the VM disk.
+                        </li>
+                        <li style="margin-bottom: 0.8rem; position: relative;">
+                            <span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>
+                            The VM automatically updates the partition table (<code>growpart</code>) and expands the filesystem (<code>resize2fs</code>).
+                        </li>
+                        <li style="margin-bottom: 0.8rem; position: relative;">
+                            <span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>
+                            Everything is logged for visibility.
+                        </li>
+                    </ul>
+
+                    <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">Security</h3>
+                    <ul style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2.5rem; padding-left: 1.5rem; list-style-type: none;">
+                        <li style="margin-bottom: 0.8rem; position: relative;">
+                            <span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-shield-alt" style="font-size: 0.9rem;"></i></span>
+                            Dedicated user on the Proxmox host
+                        </li>
+                        <li style="margin-bottom: 0.8rem; position: relative;">
+                            <span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-key" style="font-size: 0.9rem;"></i></span>
+                            Key-based SSH only
+                        </li>
+                        <li style="margin-bottom: 0.8rem; position: relative;">
+                            <span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-lock" style="font-size: 0.9rem;"></i></span>
+                            Strict sudo rule: <code style="background: rgba(0,0,0,0.2); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.95em;">NOPASSWD: /usr/sbin/qm resize *</code>
+                        </li>
+                    </ul>
+
+                    <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">Why it’s useful</h3>
+                    <p style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 0;">
+                        This setup prevents storage outages, avoids manual work, and keeps VMs scalable and self-managing &mdash; perfect for dynamic workloads.
+                    </p>
+                </div>
+            
+</ProjectLayout>

@@ -1,0 +1,32 @@
+---
+// ProjectLayout.astro
+import Layout from './Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={`${title} | Rakibul Hasan Rizvi`} description={description}>
+	<Navbar />
+	
+    <!-- Project Details Section -->
+    <section class="project-details-page section" style="padding-top: 120px; min-height: 80vh;">
+        <div class="container">
+            <a href="/index.html#projects" class="btn btn-outline" style="margin-bottom: 2rem;">
+				<i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i> Back to Projects
+			</a>
+
+            <h1 class="section-title reveal">{title}</h1>
+
+            <slot />
+        </div>
+    </section>
+
+	<Footer />
+</Layout>

@@ -1,0 +1,117 @@
+---
+import ProjectLayout from '../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout title="Monitoring Stack using Prometheus & Grafana">
+<div class="project-page-content reveal">
+                <div class="project-tech" style="margin-bottom: 2rem;">
+                    <span>Prometheus</span><span>Grafana</span><span>Docker</span>
+                </div>
+
+                <div class="glass-card" style="padding: 2.5rem;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">Project Overview</h3>
+                    <p
+                        style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2.5rem;">
+                        This setup gives clear visibility, fast incident response, and scalability—perfect for Linux,
+                        PBX, and mail infrastructure.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <!-- What's inside -->
+                        <div style="background: rgba(255, 255, 255, 0.03); padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4
+                                style="margin-bottom: 1rem; color: var(--clr-text); display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-server" style="color: #10b981; font-size: 1.25rem;"></i> What’s inside
+                            </h4>
+                            <ul style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-left: 2rem; padding-left: 1.5rem; list-style-type: none;">
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Central monitoring VM (Dockerized)</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Prometheus for metrics</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Grafana for visualization</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Alertmanager for real-time alerts</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>node_exporter on each target server</li>
+                            </ul>
+                        </div>
+
+                        <!-- Monitored metrics -->
+                        <div style="background: rgba(255, 255, 255, 0.03); padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4
+                                style="margin-bottom: 1rem; color: var(--clr-text); display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-chart-line" style="color: #10b981; font-size: 1.25rem;"></i> Monitored
+                                metrics
+                            </h4>
+                            <ul style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-left: 2rem; padding-left: 1.5rem; list-style-type: none;">
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>CPU, Memory, Disk, Network</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>PBX &amp; Mail server health</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Server availability &amp; exporter status</li>
+                            </ul>
+                        </div>
+
+                        <!-- Alerts configured -->
+                        <div style="background: rgba(255, 255, 255, 0.03); padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4
+                                style="margin-bottom: 1rem; color: var(--clr-text); display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-bell" style="color: #10b981; font-size: 1.25rem;"></i> Alerts
+                                configured
+                            </h4>
+                            <ul style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-left: 2rem; padding-left: 1.5rem; list-style-type: none;">
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Disk usage &gt; 90%</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Sustained high CPU</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Server down / exporter unreachable</li>
+                            </ul>
+                        </div>
+
+                        <!-- Production-ready touches -->
+                        <div style="background: rgba(255, 255, 255, 0.03); padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4
+                                style="margin-bottom: 1rem; color: var(--clr-text); display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-shield-alt" style="color: #10b981; font-size: 1.25rem;"></i>
+                                Production-ready touches
+                            </h4>
+                            <ul style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-left: 2rem; padding-left: 1.5rem; list-style-type: none;">
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Persistent volumes</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Firewall restrictions</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Secure Grafana access</li>
+                                <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>Configs versioned in Git</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Slide Show Section -->
+                    <div
+                        style="margin-top: 3.5rem; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; position: relative; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; background: #000;">
+                        <div style="position: relative; width: 100%; padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                            <!-- Use these two image tags and point src to the images in your folder -->
+                            <img class="monitoring-slide" src="images/monitoring-slide1.png"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 1; transition: opacity 1.5s ease-in-out;"
+                                alt="Monitoring Setup Slide 1">
+                            <img class="monitoring-slide" src="images/monitoring-slide2.png"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1.5s ease-in-out;"
+                                alt="Monitoring Setup Slide 2">
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const slides = document.querySelectorAll(".monitoring-slide");
+                            let currentSlide = 0;
+
+                            if (slides.length > 1) {
+                                setInterval(() => {
+                                    slides[currentSlide].style.opacity = 0;
+                                    currentSlide = (currentSlide + 1) % slides.length;
+                                    slides[currentSlide].style.opacity = 1;
+                                }, 4000); // Transitions every 4 seconds
+                            }
+                        });
+                    </script>
+                </div>
+            
+</ProjectLayout>
