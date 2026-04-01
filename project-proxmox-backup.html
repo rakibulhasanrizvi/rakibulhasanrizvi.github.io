@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <!-- Local Font Awesome for Icons -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
 </head>
+
 <body>
     <!-- Nimbus Ambient Background -->
     <div class="ambient-background">
@@ -37,89 +39,114 @@
     <!-- Project Details Section -->
     <section class="project-details-page section" style="padding-top: 120px; min-height: 80vh;">
         <div class="container">
-            <a href="index.html#projects" class="btn btn-outline" style="margin-bottom: 2rem;"><i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i> Back to Projects</a>
-            
+            <a href="index.html#projects" class="btn btn-outline" style="margin-bottom: 2rem;"><i
+                    class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i> Back to Projects</a>
+
             <h1 class="section-title reveal">Proxmox Backup Server Deployment</h1>
-            
+
             <div class="project-page-content reveal">
                 <div class="project-tech" style="margin-bottom: 2rem;">
                     <span>Proxmox</span><span>Backup</span><span>SysAdmin</span>
                 </div>
-                
+
                 <div class="glass-card" style="padding: 2.5rem;">
                     <h3 style="margin-bottom: 1.5rem; color: var(--clr-primary);">Project Overview</h3>
-                    <p style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2.5rem;">
+                    <p
+                        style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2.5rem;">
                         Here’s a quick overview of what I accomplished:
                     </p>
-                    
+
                     <div style="display: grid; gap: 1.5rem; margin-bottom: 2.5rem;">
-                        <ul style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-left: 1rem; padding-left: 0; list-style-type: none; display: grid; gap: 1.25rem;">
-                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <i class="fas fa-cube" style="color: #e8562a; margin-top: 4px; font-size: 1.2rem;"></i>
-                                <span>Installed Proxmox Backup Server on the dedicated backup device</span>
+                        <ul
+                            style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 2.5rem; padding-left: 1.5rem; list-style-type: none;">
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-cube" style="font-size: 0.9rem;"></i></span>
+                                Installed Proxmox Backup Server on the dedicated backup device
                             </li>
-                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <i class="fas fa-hdd" style="color: #e8562a; margin-top: 4px; font-size: 1.2rem;"></i>
-                                <span>Added a new disk and configured as datastore</span>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-hdd" style="font-size: 0.9rem;"></i></span>
+                                Added a new disk and configured as datastore
                             </li>
-                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <i class="fas fa-link" style="color: #e8562a; margin-top: 4px; font-size: 1.2rem;"></i>
-                                <span>Mounted the disk and made it persistent using <code style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-family: monospace; color: var(--clr-primary);">/etc/fstab</code></span>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-link" style="font-size: 0.9rem;"></i></span>
+                                Mounted the disk and made it persistent using <code
+                                    style="background: rgba(0,0,0,0.2); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.95em;">/etc/fstab</code>
                             </li>
-                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <i class="fas fa-check-circle" style="color: #e8562a; margin-top: 4px; font-size: 1.2rem;"></i>
-                                <span>Verified storage mapping using <code style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-family: monospace; color: var(--clr-primary);">df -h</code></span>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-check-circle" style="font-size: 0.9rem;"></i></span>
+                                Verified storage mapping using <code
+                                    style="background: rgba(0,0,0,0.2); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.95em;">df -h</code>
                             </li>
-                            <li style="display: flex; gap: 1rem; align-items: flex-start; flex-direction: column;">
-                                <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                                    <i class="fas fa-users-cog" style="color: #e8562a; margin-top: 4px; font-size: 1.2rem;"></i>
-                                    <span>Created PBS user accounts and assigned proper access roles</span>
-                                </div>
-                                <div style="margin-left: 2.2rem; font-size: 1rem; color: var(--clr-text-muted); background: rgba(255, 255, 255, 0.03); padding: 1rem 1.5rem; border-radius: var(--radius-sm); border-left: 3px solid #e8562a; width: 100%; max-width: 500px;">
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-users-cog" style="font-size: 0.9rem;"></i></span>
+                                Created PBS user accounts and assigned proper access roles:
+                                <div
+                                    style="margin-top: 0.5rem; font-size: 1rem; color: var(--clr-text-muted); background: rgba(0,0,0,0.2); padding: 1rem 1.5rem; border-radius: var(--radius-sm); border-left: 3px solid var(--clr-primary); width: 100%; max-width: 500px;">
                                     <strong>Path:</strong> /<br>
                                     <strong>Role:</strong> DataStoreAdmin
                                 </div>
                             </li>
-                            <li style="display: flex; gap: 1rem; align-items: flex-start; flex-direction: column;">
-                                <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                                    <i class="fas fa-network-wired" style="color: #e8562a; margin-top: 4px; font-size: 1.2rem;"></i>
-                                    <span>Integrated PBS with Proxmox VE:</span>
-                                </div>
-                                <div style="margin-left: 2.2rem; font-size: 1rem; color: var(--clr-text-muted); background: rgba(255, 255, 255, 0.03); padding: 1rem 1.5rem; border-radius: var(--radius-sm); border-left: 3px solid #e8562a; width: 100%; max-width: 500px;">
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-network-wired" style="font-size: 0.9rem;"></i></span>
+                                Integrated PBS with Proxmox VE:
+                                <div
+                                    style="margin-top: 0.5rem; font-size: 1rem; color: var(--clr-text-muted); background: rgba(0,0,0,0.2); padding: 1rem 1.5rem; border-radius: var(--radius-sm); border-left: 3px solid var(--clr-primary); width: 100%; max-width: 500px;">
                                     Datacenter &rarr; Storage &rarr; Add &rarr; Proxmox Backup Server
                                 </div>
                             </li>
-                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <i class="fas fa-clock" style="color: #e8562a; margin-top: 4px; font-size: 1.2rem;"></i>
-                                <span>Set up automated backup jobs based on required schedules and retention settings</span>
+                            <li style="margin-bottom: 0.8rem; position: relative;">
+                                <span
+                                    style="color: var(--clr-primary); position: absolute; left: -1.5rem; top: 0.25rem;"><i
+                                        class="fas fa-clock" style="font-size: 0.9rem;"></i></span>
+                                Set up automated backup jobs based on required schedules and retention settings
                             </li>
                         </ul>
 
-                        <div style="background: rgba(232, 86, 42, 0.05); border-left: 4px solid #e8562a; padding: 1.5rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-top: 1rem;">
-                            <h4 style="margin-bottom: 0.75rem; color: #e8562a; display: flex; align-items: center; gap: 0.75rem;">
+                        <div
+                            style="background: rgba(232, 86, 42, 0.05); border-left: 4px solid #e8562a; padding: 1.5rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-top: 1rem;">
+                            <h4
+                                style="margin-bottom: 0.75rem; color: #e8562a; display: flex; align-items: center; gap: 0.75rem;">
                                 <i class="fas fa-rocket"></i> Outcome
                             </h4>
-                            <p style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 0;">
-                                This setup now ensures reliable, automated, and efficient VM backups with deduplication and encryption support.<br><br>
-                                <em><i class="fas fa-star" style="color: #e8562a; font-size: 0.9em; margin-right: 5px;"></i> Always exciting to build robust infrastructure!</em>
+                            <p
+                                style="font-size: 1.1rem; color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 0;">
+                                This setup now ensures reliable, automated, and efficient VM backups with deduplication
+                                and encryption support.<br><br>
                             </p>
                         </div>
                     </div>
 
                     <!-- Slide Show Section -->
-                    <div style="margin-top: 3.5rem; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; position: relative; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; background: #000;">
+                    <div
+                        style="margin-top: 3.5rem; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; position: relative; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; background: #000;">
                         <div style="position: relative; width: 100%; padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
                             <!-- Use these two image tags and point src to the images in your folder -->
-                            <img class="proxmox-slide" src="images/proxmox-slide1.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 1; transition: opacity 1.5s ease-in-out;" alt="Proxmox Backup Setup Slide 1">
-                            <img class="proxmox-slide" src="images/proxmox-slide2.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1.5s ease-in-out;" alt="Proxmox Backup Setup Slide 2">
+                            <img class="proxmox-slide" src="images/proxmox-slide1.png"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 1; transition: opacity 1.5s ease-in-out;"
+                                alt="Proxmox Backup Setup Slide 1">
+                            <img class="proxmox-slide" src="images/proxmox-slide2.png"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1.5s ease-in-out;"
+                                alt="Proxmox Backup Setup Slide 2">
                         </div>
                     </div>
-                    
+
                     <script>
-                        document.addEventListener("DOMContentLoaded", function() {
+                        document.addEventListener("DOMContentLoaded", function () {
                             const slides = document.querySelectorAll(".proxmox-slide");
                             let currentSlide = 0;
-                            
+
                             if (slides.length > 1) {
                                 setInterval(() => {
                                     slides[currentSlide].style.opacity = 0;
@@ -138,12 +165,18 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/rakibulhasanrizvi" target="_blank" aria-label="GitHub" class="github"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rakibulhasanrizvi" target="_blank" aria-label="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="https://wa.me/8801679343895" target="_blank" aria-label="WhatsApp" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.fiverr.com/sellers/r_i_z_v_i/" target="_blank" aria-label="Fiverr" title="Fiverr" class="fiverr">
-                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" style="vertical-align: -0.125em;">
-                        <path d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092v2.466h-1.61v-3.558h-.684c-.547 0-.84.41-.84 1.092v2.466h-1.61v-4.874h1.61v.74c.264-.574.626-.74 1.163-.74h1.972v.74c.264-.574.625-.74 1.162-.74h.527v1.316zm-6.786 1.501h-3.359c.088.546.43.858 1.006.858.43 0 .732-.175.83-.487l1.425.4c-.351.848-1.22 1.364-2.255 1.364-1.748 0-2.549-1.355-2.549-2.515 0-1.14.703-2.505 2.45-2.505 1.856 0 2.471 1.384 2.471 2.408 0 .224-.01.37-.02.477zm-1.562-.945c-.04-.42-.342-.81-.889-.81-.508 0-.81.225-.908.81h1.797zM7.508 15.44h1.416l1.767-4.874h-1.62l-.86 2.837-.878-2.837H5.72l1.787 4.874zm-6.6 0H2.51v-3.558h1.524v3.558h1.591v-4.874H2.51v-.302c0-.332.235-.536.606-.536h.918V8.412H2.85c-1.162 0-1.943.712-1.943 1.755v.4H0v1.316h.908v3.558z" />
+                <a href="https://github.com/rakibulhasanrizvi" target="_blank" aria-label="GitHub" class="github"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rakibulhasanrizvi" target="_blank" aria-label="LinkedIn"
+                    class="linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/8801679343895" target="_blank" aria-label="WhatsApp" class="whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.fiverr.com/sellers/r_i_z_v_i/" target="_blank" aria-label="Fiverr" title="Fiverr"
+                    class="fiverr">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                        fill="currentColor" style="vertical-align: -0.125em;">
+                        <path
+                            d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092v2.466h-1.61v-3.558h-.684c-.547 0-.84.41-.84 1.092v2.466h-1.61v-4.874h1.61v.74c.264-.574.626-.74 1.163-.74h1.972v.74c.264-.574.625-.74 1.162-.74h.527v1.316zm-6.786 1.501h-3.359c.088.546.43.858 1.006.858.43 0 .732-.175.83-.487l1.425.4c-.351.848-1.22 1.364-2.255 1.364-1.748 0-2.549-1.355-2.549-2.515 0-1.14.703-2.505 2.45-2.505 1.856 0 2.471 1.384 2.471 2.408 0 .224-.01.37-.02.477zm-1.562-.945c-.04-.42-.342-.81-.889-.81-.508 0-.81.225-.908.81h1.797zM7.508 15.44h1.416l1.767-4.874h-1.62l-.86 2.837-.878-2.837H5.72l1.787 4.874zm-6.6 0H2.51v-3.558h1.524v3.558h1.591v-4.874H2.51v-.302c0-.332.235-.536.606-.536h.918V8.412H2.85c-1.162 0-1.943.712-1.943 1.755v.4H0v1.316h.908v3.558z" />
                     </svg>
                 </a>
             </div>
@@ -153,4 +186,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
