@@ -542,7 +542,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
     cursor: pointer;
     background: linear-gradient(to right, #0f172a, #111122);
     user-select: none;
