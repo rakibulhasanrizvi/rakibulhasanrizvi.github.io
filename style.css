@@ -620,7 +620,7 @@ nav {
 .project-tech span {
     font-size: 0.85rem;
     color: var(--clr-secondary);
-    font-family: monospace;
+    font-family: var(--font-main);
     background-color: rgba(139, 92, 246, 0.1);
     padding: 0.2rem 0.6rem;
     border-radius: 20px;
